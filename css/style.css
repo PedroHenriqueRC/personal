@@ -1,12 +1,4 @@
-/* =========================================================
-   PORTFÓLIO — PEDRO HENRIQUE
-   DESIGN SYSTEM
-========================================================= */
-
 :root {
-    /* =========================
-        PALETAS DE CORES
-    ========================= */
     --bg: #05070b;
     --bg-soft: #080b11;
     --bg-card: #0b0f17;
@@ -31,47 +23,23 @@
 
     --danger: #ff647c;
 
-    /* =========================
-       TIPOGRAFIA
-    ========================= */
-
     --font-body: "Inter", sans-serif;
     --font-display: "Poppins", sans-serif;
 
-    /* =========================
-       LAYOUT
-    ========================= */
-
     --container: 1240px;
-
-    /* =========================
-       BORDER RADIUS
-    ========================= */
 
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 22px;
     --radius-xl: 32px;
 
-    /* =========================
-       SOMBRAS
-    ========================= */
-
     --shadow-sm: 0 8px 25px rgba(0, 0, 0, 0.2);
-    --shadow-md:0 20px 60px rgba(0, 0, 0, 0.35);
-    --shadow-glow:0 0 60px rgba(91, 140, 255, 0.15);
-
-    /* =========================
-       TRANSIÇÕES
-    ========================= */
+    --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 60px rgba(91, 140, 255, 0.15);
 
     --transition-fast: 180ms ease;
-    --transition:300ms cubic-bezier(0.22, 1, 0.36, 1);
-    --transition-slow:700ms cubic-bezier(0.22, 1, 0.36, 1);
-
-    /* =========================
-       CAMADAS
-    ========================= */
+    --transition: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-slow: 700ms cubic-bezier(0.22, 1, 0.36, 1);
 
     --z-content: 1;
     --z-navigation: 1000;
@@ -83,11 +51,6 @@
     --z-modal-content: 5002;
     --z-cursor: 9999;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *,
 *::before,
@@ -106,19 +69,13 @@ html {
 
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at 15% 10%,rgba(91, 140, 255, 0.06),transparent 30%),radial-gradient(circle at 85% 70%,rgba(77, 231, 255, 0.035),
-            transparent 30%
-        ),
+    background: radial-gradient(circle at 15% 10%, rgba(91, 140, 255, 0.06), transparent 30%), radial-gradient(circle at 85% 70%, rgba(77, 231, 255, 0.035),
+            transparent 30%),
         var(--bg);
-
     color: var(--text);
-
     font-family: var(--font-body);
-
     line-height: 1.6;
-
     overflow-x: hidden;
-
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -163,11 +120,6 @@ img {
     display: block;
 }
 
-
-/* =========================================================
-   SCROLLBAR
-========================================================= */
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -189,168 +141,94 @@ img {
 }
 
 
-/* =========================================================
-   UTILITÁRIOS
-========================================================= */
-
 .section {
     position: relative;
-
     padding: 140px 0;
-
     isolation: isolate;
 }
 
-
 .section-container {
-    width: min(
-        calc(100% - 48px),
-        var(--container)
-    );
-
+    width: min(calc(100% - 48px), var(--container));
     margin-inline: auto;
 }
 
-
 .section-header {
     position: relative;
-
     max-width: 850px;
-
     margin-bottom: 70px;
 }
-
 
 .section-index {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     margin-bottom: 18px;
-
     color: var(--primary-light);
-
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 0.18em;
-
     text-transform: uppercase;
 }
 
-
 .section-index::before {
     content: "";
-
     width: 28px;
     height: 1px;
-
     background: var(--primary);
 }
-
 
 .section-header h2,
 .objective-content h2,
 .contact-content h2,
 .knowledge-content h2 {
     font-family: var(--font-display);
-
-    font-size: clamp(
-        38px,
-        5vw,
-        72px
-    );
-
+    font-size: clamp(38px, 5vw, 72px);
     line-height: 1.02;
-
     letter-spacing: -0.045em;
-
     font-weight: 600;
 }
-
 
 .section-header h2 span,
 .objective-content h2 span,
 .knowledge-content h2 span {
     display: block;
-
     color: var(--text-muted);
 }
 
-
 .section-description {
     max-width: 650px;
-
     margin-top: 22px;
-
     color: var(--text-soft);
-
     font-size: 17px;
 }
 
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
 #navbar {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
-    /* Menu deve ficar acima do overlay de menu (pseudo-elemento body.menu-open::after)
-       --z-menu está definido como 1100 e o overlay como --z-menu-overlay (1090). */
     z-index: var(--z-menu);
-
     border-bottom: 1px solid transparent;
-
-    transition:
-        background var(--transition),
-        border-color var(--transition),
-        backdrop-filter var(--transition),
-        transform var(--transition);
+    transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition), transform var(--transition);
 }
-
 
 #navbar.scrolled {
     background: rgba(5, 7, 11, 0.78);
-
     border-color: var(--border);
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
-
 
 .navbar-container {
     position: relative;
-
-    width: min(
-        calc(100% - 48px),
-        var(--container)
-    );
-
+    width: min(calc(100% - 48px), var(--container));
     height: 84px;
-
     margin-inline: auto;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
-
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .logo {
     display: inline-flex;
@@ -374,6 +252,11 @@ img {
     z-index: var(--z-menu-button);
 }
 
+.logo img {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+}
 
 .logo-mark {
     width: 38px;
@@ -387,11 +270,9 @@ img {
     border-radius: 10px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgba(91, 140, 255, 0.2),
-            rgba(77, 231, 255, 0.05)
-        );
+            rgba(77, 231, 255, 0.05));
 
     color: var(--primary-light);
 
@@ -556,8 +437,7 @@ img {
     top: 21px;
 
     transform:
-        translateX(-50%)
-        rotate(45deg);
+        translateX(-50%) rotate(45deg);
 }
 
 
@@ -565,8 +445,7 @@ img {
     top: 21px;
 
     transform:
-        translateX(-50%)
-        rotate(-45deg);
+        translateX(-50%) rotate(-45deg);
 }
 
 
@@ -659,12 +538,10 @@ body.menu-open::after {
     z-index: var(--z-cursor);
 
     background:
-        radial-gradient(
-            circle,
+        radial-gradient(circle,
             rgba(91, 140, 255, 0.11),
             rgba(91, 140, 255, 0.035) 35%,
-            transparent 70%
-        );
+            transparent 70%);
 
     transform:
         translate(-50%, -50%);
@@ -698,8 +575,7 @@ body:hover .cursor-glow {
     overflow: hidden;
 
     padding:
-        140px 0
-        100px;
+        140px 0 100px;
 }
 
 
@@ -721,24 +597,18 @@ body:hover .cursor-glow {
     inset: 0;
 
     background-image:
-        linear-gradient(
-            rgba(255,255,255,0.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.035) 1px,
-            transparent 1px
-        );
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px);
 
     background-size: 60px 60px;
 
     mask-image:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             black,
-            transparent 90%
-        );
+            transparent 90%);
 
     opacity: 0.55;
 }
@@ -777,18 +647,15 @@ body:hover .cursor-glow {
 
 
 .hero-container {
-    width: min(
-        calc(100% - 48px),
-        var(--container)
-    );
+    width: min(calc(100% - 48px),
+            var(--container));
 
     margin-inline: auto;
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(420px, 0.95fr);
+        minmax(0, 1.05fr) minmax(420px, 0.95fr);
 
     gap: 70px;
 
@@ -835,11 +702,9 @@ body:hover .cursor-glow {
 
     font-family: var(--font-display);
 
-    font-size: clamp(
-        52px,
-        7vw,
-        100px
-    );
+    font-size: clamp(52px,
+            7vw,
+            100px);
 
     line-height: 0.94;
 
@@ -855,7 +720,7 @@ body:hover .cursor-glow {
     color: transparent;
 
     -webkit-text-stroke:
-        1px rgba(255,255,255,0.5);
+        1px rgba(255, 255, 255, 0.5);
 
     transition:
         color var(--transition);
@@ -863,7 +728,7 @@ body:hover .cursor-glow {
 
 
 .hero-title span:hover {
-    color: rgba(255,255,255,0.07);
+    color: rgba(255, 255, 255, 0.07);
 }
 
 
@@ -958,20 +823,20 @@ body:hover .cursor-glow {
     color: #05070b;
 
     box-shadow:
-        0 15px 40px rgba(255,255,255,0.08);
+        0 15px 40px rgba(255, 255, 255, 0.08);
 }
 
 
 .button-primary:hover {
     box-shadow:
-        0 20px 45px rgba(255,255,255,0.15);
+        0 20px 45px rgba(255, 255, 255, 0.15);
 }
 
 
 .button-secondary {
     border: 1px solid var(--border);
 
-    background: rgba(255,255,255,0.025);
+    background: rgba(255, 255, 255, 0.025);
 
     color: var(--text);
 }
@@ -1014,8 +879,8 @@ body:hover .cursor-glow {
     background: var(--green);
 
     box-shadow:
-        0 0 0 5px rgba(66,232,165,0.08),
-        0 0 15px rgba(66,232,165,0.5);
+        0 0 0 5px rgba(66, 232, 165, 0.08),
+        0 0 15px rgba(66, 232, 165, 0.5);
 
     animation:
         statusPulse 2s infinite;
@@ -1027,14 +892,14 @@ body:hover .cursor-glow {
     0%,
     100% {
         box-shadow:
-            0 0 0 5px rgba(66,232,165,0.08),
-            0 0 15px rgba(66,232,165,0.5);
+            0 0 0 5px rgba(66, 232, 165, 0.08),
+            0 0 15px rgba(66, 232, 165, 0.5);
     }
 
     50% {
         box-shadow:
-            0 0 0 9px rgba(66,232,165,0.02),
-            0 0 25px rgba(66,232,165,0.8);
+            0 0 0 9px rgba(66, 232, 165, 0.02),
+            0 0 25px rgba(66, 232, 165, 0.8);
     }
 }
 
@@ -1064,11 +929,9 @@ body:hover .cursor-glow {
     border-radius: var(--radius-lg);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.07),
-            rgba(255,255,255,0.015)
-        );
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.015));
 
     box-shadow:
         var(--shadow-md),
@@ -1079,9 +942,7 @@ body:hover .cursor-glow {
     overflow: hidden;
 
     transform:
-        perspective(1200px)
-        rotateY(-7deg)
-        rotateX(3deg);
+        perspective(1200px) rotateY(-7deg) rotateX(3deg);
 
     transition:
         transform var(--transition);
@@ -1090,10 +951,7 @@ body:hover .cursor-glow {
 
 .hero-code-card:hover {
     transform:
-        perspective(1200px)
-        rotateY(-2deg)
-        rotateX(1deg)
-        translateY(-8px);
+        perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(-8px);
 }
 
 
@@ -1110,7 +968,7 @@ body:hover .cursor-glow {
 
     border-bottom: 1px solid var(--border);
 
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -1120,7 +978,7 @@ body:hover .cursor-glow {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -1182,7 +1040,7 @@ body:hover .cursor-glow {
     position: absolute;
 
     border:
-        1px solid rgba(91,140,255,0.12);
+        1px solid rgba(91, 140, 255, 0.12);
 
     border-radius: 50%;
 
@@ -1195,8 +1053,7 @@ body:hover .cursor-glow {
     height: 600px;
 
     transform:
-        rotateX(68deg)
-        rotateZ(15deg);
+        rotateX(68deg) rotateZ(15deg);
 }
 
 
@@ -1205,8 +1062,7 @@ body:hover .cursor-glow {
     height: 450px;
 
     transform:
-        rotateX(68deg)
-        rotateZ(-20deg);
+        rotateX(68deg) rotateZ(-20deg);
 }
 
 
@@ -1215,8 +1071,7 @@ body:hover .cursor-glow {
     height: 320px;
 
     transform:
-        rotateX(68deg)
-        rotateZ(45deg);
+        rotateX(68deg) rotateZ(45deg);
 }
 
 
@@ -1231,7 +1086,7 @@ body:hover .cursor-glow {
     border-radius: 8px;
 
     background:
-        rgba(8,11,17,0.8);
+        rgba(8, 11, 17, 0.8);
 
     backdrop-filter: blur(12px);
 
@@ -1325,11 +1180,9 @@ body:hover .cursor-glow {
     height: 55px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             var(--primary),
-            transparent
-        );
+            transparent);
 
     animation:
         scrollLine 2s ease-in-out infinite;
@@ -1361,11 +1214,9 @@ body:hover .cursor-glow {
     border-top: 1px solid var(--border);
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             var(--bg),
-            var(--bg-soft)
-        );
+            var(--bg-soft));
 }
 
 
@@ -1373,8 +1224,7 @@ body:hover .cursor-glow {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+        minmax(0, 1fr) minmax(0, 1fr);
 
     gap: 90px;
 
@@ -1468,7 +1318,7 @@ body:hover .cursor-glow {
     transform: translateY(-6px);
 
     border-color:
-        rgba(91,140,255,0.3);
+        rgba(91, 140, 255, 0.3);
 
     background: var(--surface-hover);
 }
@@ -1479,7 +1329,7 @@ body:hover .cursor-glow {
 }
 
 
-.profile-card > span {
+.profile-card>span {
     color: var(--primary);
 
     font-family: monospace;
@@ -1518,6 +1368,10 @@ body:hover .cursor-glow {
     background: var(--bg-soft);
 }
 
+.container-timeline {
+    display: grid;
+    grid-auto-flow: column;
+}
 
 .timeline {
     position: relative;
@@ -1541,11 +1395,9 @@ body:hover .cursor-glow {
     width: 1px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             var(--primary),
-            rgba(91,140,255,0.05)
-        );
+            rgba(91, 140, 255, 0.05));
 }
 
 
@@ -1600,8 +1452,8 @@ body:hover .cursor-glow {
     color: var(--primary-light);
 
     box-shadow:
-        0 0 0 8px rgba(91,140,255,0.05),
-        0 0 30px rgba(91,140,255,0.15);
+        0 0 0 8px rgba(91, 140, 255, 0.05),
+        0 0 30px rgba(91, 140, 255, 0.15);
 }
 
 
@@ -1645,18 +1497,11 @@ body:hover .cursor-glow {
     opacity: 0.65;
 }
 
-
-/* =========================================================
-   PROJETO ACADÊMICO
-========================================================= */
-
 .academic-section {
     background:
-        radial-gradient(
-            circle at 80% 50%,
-            rgba(91,140,255,0.08),
-            transparent 30%
-        );
+        radial-gradient(circle at 80% 50%,
+            rgba(91, 140, 255, 0.08),
+            transparent 30%);
 }
 
 
@@ -1664,8 +1509,7 @@ body:hover .cursor-glow {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
+        minmax(0, 0.85fr) minmax(0, 1.15fr);
 
     gap: 80px;
 
@@ -1689,11 +1533,9 @@ body:hover .cursor-glow {
 
     font-family: var(--font-display);
 
-    font-size: clamp(
-        38px,
-        5vw,
-        64px
-    );
+    font-size: clamp(38px,
+            5vw,
+            64px);
 
     line-height: 1;
 
@@ -1701,7 +1543,7 @@ body:hover .cursor-glow {
 }
 
 
-.featured-project-info > p {
+.featured-project-info>p {
     max-width: 570px;
 
     margin-top: 25px;
@@ -1738,7 +1580,7 @@ body:hover .cursor-glow {
 
     border-radius: 8px;
 
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 
     color: var(--text-soft);
 
@@ -1789,8 +1631,7 @@ body:hover .cursor-glow {
 
 .project-visual-window:hover {
     transform:
-        rotate(0deg)
-        translateY(-8px);
+        rotate(0deg) translateY(-8px);
 }
 
 
@@ -1841,7 +1682,7 @@ body:hover .cursor-glow {
 
     border-right: 1px solid var(--border);
 
-    background: rgba(255,255,255,0.015);
+    background: rgba(255, 255, 255, 0.015);
 }
 
 
@@ -1856,11 +1697,9 @@ body:hover .cursor-glow {
     border-radius: 8px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #f29dc3,
-            #bc6680
-        );
+            #bc6680);
 
     color: white;
 
@@ -1916,11 +1755,9 @@ body:hover .cursor-glow {
     border-radius: 10px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #101722,
-            #0b1018
-        );
+            #0b1018);
 }
 
 
@@ -1942,7 +1779,7 @@ body:hover .cursor-glow {
 
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.015);
+    background: rgba(255, 255, 255, 0.015);
 }
 
 
@@ -1955,11 +1792,9 @@ body:hover .cursor-glow {
         5px 5px 0 0;
 
     background:
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             var(--primary-dark),
-            var(--primary-light)
-        );
+            var(--primary-light));
 
     opacity: 0.8;
 }
@@ -2032,11 +1867,9 @@ body:hover .cursor-glow {
     border-radius: var(--radius-md);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.045),
-            rgba(255,255,255,0.012)
-        );
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.012));
 
     overflow: hidden;
 
@@ -2079,12 +1912,12 @@ body:hover .cursor-glow {
     transform: translateY(-8px);
 
     border-color:
-        rgba(91,140,255,0.32);
+        rgba(91, 140, 255, 0.32);
 
     background: var(--bg-card-hover);
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,0.3);
+        0 25px 70px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -2099,7 +1932,7 @@ body:hover .cursor-glow {
    fique acima do pseudo-elemento decorativo.
 */
 
-.project-card > * {
+.project-card>* {
     position: relative;
 
     z-index: 1;
@@ -2188,7 +2021,7 @@ body:hover .cursor-glow {
 }
 
 
-.project-card-footer > span {
+.project-card-footer>span {
     padding:
         5px 8px;
 
@@ -2314,10 +2147,10 @@ body:hover .cursor-glow {
     transform: translateY(-3px);
 
     border-color:
-        rgba(91,140,255,0.3);
+        rgba(91, 140, 255, 0.3);
 
     background:
-        rgba(91,140,255,0.06);
+        rgba(91, 140, 255, 0.06);
 
     color: var(--text);
 }
@@ -2397,13 +2230,11 @@ body:hover .cursor-glow {
 
 .knowledge-grid {
     mask-image:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             transparent,
             black 25%,
             black 75%,
-            transparent
-        );
+            transparent);
 }
 
 
@@ -2488,11 +2319,9 @@ body:hover .cursor-glow {
         1px solid var(--border);
 
     background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.025),
-            transparent
-        );
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.025),
+            transparent);
 
     transition:
         transform var(--transition),
@@ -2504,7 +2333,7 @@ body:hover .cursor-glow {
     transform: translateY(-7px);
 
     border-color:
-        rgba(91,140,255,0.3);
+        rgba(91, 140, 255, 0.3);
 }
 
 
@@ -2553,11 +2382,9 @@ body:hover .cursor-glow {
     align-items: center;
 
     background:
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(91,140,255,0.08),
-            transparent 40%
-        );
+        radial-gradient(circle at 50% 50%,
+            rgba(91, 140, 255, 0.08),
+            transparent 40%);
 }
 
 
@@ -2589,20 +2416,15 @@ body:hover .cursor-glow {
 ========================================================= */
 
 .contact-section {
+    display: grid;
     position: relative;
-
-    padding:
-        160px 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0a0f19,
-            #05070b
-        );
-
-    border-top:
-        1px solid var(--border);
+    padding: 160px 100px;
+    background: linear-gradient(135deg, #0a0f19, #05070b);
+    border-top: 1px solid var(--border);
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 
@@ -2676,18 +2498,19 @@ body:hover .cursor-glow {
     transform: translateY(-4px);
 
     border-color:
-        rgba(91,140,255,0.35);
+        rgba(91, 140, 255, 0.35);
 
     background:
-        rgba(91,140,255,0.05);
+        rgba(91, 140, 255, 0.05);
 
     color: var(--text);
 }
 
-
-/* =========================================================
-   MODAL DE PROJETOS
-========================================================= */
+.contact-section img {
+    width: 70%;
+    border-radius: 170px;
+    border: 5px solid var(--border);
+}
 
 #project-modal {
     position: fixed;
@@ -2745,7 +2568,7 @@ body:hover .cursor-glow {
     z-index: var(--z-modal-overlay);
 
     background:
-        rgba(2,4,7,0.82);
+        rgba(2, 4, 7, 0.82);
 
     backdrop-filter:
         blur(12px);
@@ -2764,10 +2587,8 @@ body:hover .cursor-glow {
 
     z-index: var(--z-modal-content);
 
-    width: min(
-        100%,
-        800px
-    );
+    width: min(100%,
+            800px);
 
     max-height:
         min(85vh, 800px);
@@ -2784,28 +2605,23 @@ body:hover .cursor-glow {
         var(--radius-lg);
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #10151e,
-            #080b11
-        );
+            #080b11);
 
     box-shadow:
-        0 40px 120px rgba(0,0,0,0.6);
+        0 40px 120px rgba(0, 0, 0, 0.6);
 
     transform:
-        translateY(20px)
-        scale(0.97);
+        translateY(20px) scale(0.97);
 
     opacity: 0;
 
     transition:
-        transform 400ms cubic-bezier(
-            0.22,
+        transform 400ms cubic-bezier(0.22,
             1,
             0.36,
-            1
-        ),
+            1),
         opacity 300ms ease;
 }
 
@@ -2814,8 +2630,7 @@ body:hover .cursor-glow {
 #project-modal.is-open .modal-content,
 #project-modal[aria-hidden="false"] .modal-content {
     transform:
-        translateY(0)
-        scale(1);
+        translateY(0) scale(1);
 
     opacity: 1;
 }
@@ -2863,7 +2678,7 @@ body:hover .cursor-glow {
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255, 255, 255, 0.03);
 
     color: var(--text);
 
@@ -2884,17 +2699,16 @@ body:hover .cursor-glow {
     transform: rotate(90deg);
 
     border-color:
-        rgba(255,255,255,0.2);
+        rgba(255, 255, 255, 0.2);
 
     background:
-        rgba(255,255,255,0.08);
+        rgba(255, 255, 255, 0.08);
 }
 
 
 #modal-close:active {
     transform:
-        rotate(90deg)
-        scale(0.94);
+        rotate(90deg) scale(0.94);
 }
 
 
@@ -2918,11 +2732,9 @@ body:hover .cursor-glow {
 
     font-family: var(--font-display);
 
-    font-size: clamp(
-        34px,
-        5vw,
-        58px
-    );
+    font-size: clamp(34px,
+            5vw,
+            58px);
 
     line-height: 1;
 
@@ -3020,10 +2832,8 @@ body:hover .cursor-glow {
 
 
 .footer-container {
-    width: min(
-        calc(100% - 48px),
-        var(--container)
-    );
+    width: min(calc(100% - 48px),
+            var(--container));
 
     margin-inline: auto;
 
@@ -3110,18 +2920,14 @@ body:hover .cursor-glow {
         translateY(35px);
 
     transition:
-        opacity 800ms cubic-bezier(
-            0.22,
+        opacity 800ms cubic-bezier(0.22,
             1,
             0.36,
-            1
-        ),
-        transform 800ms cubic-bezier(
-            0.22,
+            1),
+        transform 800ms cubic-bezier(0.22,
             1,
             0.36,
-            1
-        );
+            1);
 }
 
 
@@ -3291,20 +3097,20 @@ body:hover .cursor-glow {
         height: 100vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding:120px 35px 40px;
+        padding: 120px 35px 40px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 24px;
         background: rgba(0, 14, 43, 0.772);
         border-left: 1px solid var(--border);
-        backdrop-filter:blur(20px);
-        -webkit-backdrop-filter:blur(20px);
-        transform:translateX(100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transform: translateX(100%);
         visibility: hidden;
         pointer-events: none;
-        transition: transform 400ms cubic-bezier(0.22,1,0.36,1),visibility 400ms ease;
-        box-shadow: -20px 0 70px rgba(0,0,0,0.4);
+        transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), visibility 400ms ease;
+        box-shadow: -20px 0 70px rgba(0, 0, 0, 0.4);
     }
 
 
@@ -3351,11 +3157,9 @@ body:hover .cursor-glow {
 
 
     .hero-title {
-        font-size: clamp(
-            48px,
-            11vw,
-            76px
-        );
+        font-size: clamp(48px,
+                11vw,
+                76px);
     }
 
 
@@ -3452,7 +3256,7 @@ body:hover .cursor-glow {
 
     #navbar.scrolled {
         background:
-            rgba(5,7,11,0.92);
+            rgba(5, 7, 11, 0.92);
     }
 
 
@@ -3485,8 +3289,7 @@ body:hover .cursor-glow {
             auto;
 
         padding:
-            120px 0
-            90px;
+            120px 0 90px;
     }
 
 
@@ -3494,11 +3297,9 @@ body:hover .cursor-glow {
         margin-top: 20px;
 
         font-size:
-            clamp(
-                43px,
+            clamp(43px,
                 13vw,
-                65px
-            );
+                65px);
     }
 
 
@@ -3607,11 +3408,9 @@ body:hover .cursor-glow {
     .contact-content h2,
     .knowledge-content h2 {
         font-size:
-            clamp(
-                36px,
+            clamp(36px,
                 11vw,
-                52px
-            );
+                52px);
     }
 
 
@@ -3654,20 +3453,15 @@ body:hover .cursor-glow {
 
 
     .timeline-item {
-        grid-template-columns:
-            44px 1fr;
-
+        grid-template-columns: 44px 1fr;
         gap: 18px;
-
         padding-bottom:
             40px;
     }
 
-
     .timeline-marker {
         width: 44px;
         height: 44px;
-
         font-size: 9px;
     }
 
@@ -3690,11 +3484,9 @@ body:hover .cursor-glow {
 
     .featured-project-info h3 {
         font-size:
-            clamp(
-                38px,
+            clamp(38px,
                 12vw,
-                55px
-            );
+                55px);
     }
 
 
@@ -3793,56 +3585,41 @@ body:hover .cursor-glow {
             14px;
     }
 
-
     .objective-section {
         min-height:
             auto;
     }
 
-
     .objective-content p {
-        font-size:
-            14px;
+        font-size: 14px;
     }
-
 
     .contact-section {
-        padding:
-            100px 0;
+        padding: 100px 0;
     }
 
-
     .contact-content p {
-        font-size:
-            14px;
+        font-size: 14px;
     }
 
     .contact-actions {
-        flex-direction:column;
+        flex-direction: column;
     }
-
 
     .contact-link {
         width: 100%;
     }
 
-
-    /* =========================
-       MODAL MOBILE
-    ========================= */
-
     #project-modal {
-        padding:15px;
+        padding: 15px;
     }
-
 
     .modal-content {
         width: 100%;
-        max-height:90vh;
-        padding:35px 22px 30px;
-        border-radius:18px;
+        max-height: 90vh;
+        padding: 35px 22px 30px;
+        border-radius: 18px;
     }
-
 
     #modal-close {
         top: 14px;
@@ -3851,40 +3628,32 @@ body:hover .cursor-glow {
         height: 36px;
     }
 
-
     #modal-title {
-        padding-right:35px;
-        font-size:35px;
+        padding-right: 35px;
+        font-size: 35px;
     }
-
 
     #modal-description,
     .modal-section p {
         font-size: 13px;
     }
 
-
     .footer-container {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
     .footer-links {
-        justify-content:flex-start;
-        flex-wrap:wrap;
-        gap:16px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
     }
 
     .footer-copy {
-        grid-column:auto;
-        text-align:left;
+        grid-column: auto;
+        text-align: left;
     }
 }
-
-
-/* =========================================================
-   MOBILE PEQUENO
-========================================================= */
 
 @media (max-width: 380px) {
 
@@ -3892,11 +3661,11 @@ body:hover .cursor-glow {
     .navbar-container,
     .hero-container,
     .footer-container {
-        width:calc(100% - 24px);
+        width: calc(100% - 24px);
     }
 
     .hero-title {
-        font-size:42px;
+        font-size: 42px;
     }
 
     .hero-role {
@@ -3904,38 +3673,37 @@ body:hover .cursor-glow {
     }
 
     .hero-role span {
-        margin:0 4px;
+        margin: 0 4px;
     }
 
     .main-navigation {
-        left:8%;
+        left: 8%;
     }
 
     .profile-card {
-        padding:18px;
+        padding: 18px;
     }
 
     .project-card {
-        padding:18px;
+        padding: 18px;
     }
 
     .project-card-footer {
-        align-items:
-            flex-start;
+        align-items: flex-start;
     }
 
     .project-button {
-        width:100%;
-        margin-top:8px;
-        padding-top:10px;
-        border-top:1px solid var(--border);
+        width: 100%;
+        margin-top: 8px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
     }
 
     .modal-content {
-        padding:30px 18px 25px;
+        padding: 30px 18px 25px;
     }
 
     #modal-title {
-        font-size:31px;
+        font-size: 31px;
     }
 }
