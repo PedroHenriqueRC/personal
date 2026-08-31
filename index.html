@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Portfólio profissional de Pedro Henrique Rodrigues Cardoso — Engenharia de Dados, DevOps, Automação e Governança de Dados.">
+    <meta property="og:title" content="Pedro Henrique — Engenharia de Dados & DevOps">
+    <meta property="og:description"
+        content="Engenharia de Dados, automação e DevOps. Portfólio de projetos e cases práticos." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://pedrohenriquerc.github.io/personal/">
     <link rel="icon" type="image/png" href="./assets/icons/PH.png">
 
     <meta name="author" content="Pedro Henrique Rodrigues Cardoso">
@@ -25,15 +30,15 @@
     <header id="navbar">
         <div class="navbar-container">
             <a href="#home" class="logo">
-                <img src="./assets/icons/PH.png" alt="Logo PH" class="logo-image">
-                <!-- <span class="logo-mark">PH</span> -->
+                <!-- <img src="./assets/icons/PH.png" alt="Logo PH" class="logo-image"> -->
+                <span class="logo-mark">PH</span>
                 Pedro Henrique
             </a>
             <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                 <span></span>
                 <span></span>
             </button>
-            <nav class="main-navigation">
+            <nav class="main-navigation" role="navigation" aria-hidden="false">
                 <a href="#home" class="nav-link">Início</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#jornada" class="nav-link">Experiência</a>
@@ -53,39 +58,15 @@
             </div>
             <div class="hero-container">
                 <div class="hero-content">
-                    <span class="eyebrow hero-eyebrow">
-                        DATA ENGINEERING • DEVOPS • AUTOMATION
-                    </span>
-                    <h1 class="hero-title">
-                        Pedro Henrique
-                        <span>
-                            Rodrigues Cardoso
-                        </span>
-                    </h1>
-                    <p class="hero-role">
-                        Engenharia de Dados
-                        <span>•</span>
-                        DevOps
-                        <span>•</span>
-                        Automação
-                        <span>•</span>
-                        Governança de Dados
-                    </p>
-                    <p class="hero-description">
-                        Transformando processos e dados em
-                        soluções mais eficientes, escaláveis
-                        e governadas.
-                    </p>
+                    <span class="eyebrow hero-eyebrow">DATA ENGINEERING • DEVOPS • AUTOMATION</span>
+                    <h1 class="hero-title">Pedro Henrique<span>Rodrigues Cardoso</span></h1>
+                    <p class="hero-lead" style="margin-top:18px; color:var(--text-soft); max-width:720px;">Construo
+                        pipelines e plataformas confiáveis com foco em automação, observabilidade e governança.
+                        Tecnologias: Python, PySpark, Databricks, SQL e infraestrutura em nuvem.</p>
                     <div class="hero-actions">
-                        <a href="#projetos" class="button button-primary">
-                            Conhecer meus projetos
-                            <span aria-hidden="true">
-                                →
-                            </span>
-                        </a>
-                        <a href="#sobre" class="button button-secondary">
-                            Minha jornada
-                        </a>
+                        <a href="#projetos" class="button button-primary">Ver projetos <span
+                                aria-hidden="true">→</span></a>
+                        <a href="#contato" class="button button-secondary">Contato</a>
                     </div>
                 </div>
                 <div class="hero-visual" aria-hidden="true">
@@ -94,9 +75,23 @@
                     <div class="data-orbit orbit-three"></div>
                     <div class="hero-code-card">
                         <div class="code-window-header">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span class="window-control close" aria-label="Fechar">
+                                <svg viewBox="0 0 10 10" aria-hidden="true">
+                                    <path d="M2 2L8 8M8 2L2 8"></path>
+                                </svg>
+                            </span>
+                            <span class="window-control minimize" aria-label="Minimizar">
+                                <svg viewBox="0 0 10 10" aria-hidden="true">
+                                    <path d="M2 5H8"></path>
+                                </svg>
+                            </span>
+
+                            <span class="window-control maximize" aria-label="Maximizar">
+                                <svg viewBox="0 0 10 10" aria-hidden="true">
+                                    <path d="M3 3H7V7"></path>
+                                    <path d="M7 3L3 7"></path>
+                                </svg>
+                            </span>
                         </div>
                         <div class="code-window-content">
                             <p class="code-line">
@@ -104,7 +99,8 @@
                                 <span class="code-keyword">const</span>
                                 profile = {
                             </p>
-                            <p class="code-line indent">
+                            <p class="code-line">
+                                <span class="code-number">02</span>
                                 <span class="code-property">
                                     name:
                                 </span>
@@ -112,7 +108,8 @@
                                     "Pedro Henrique"
                                 </span>,
                             </p>
-                            <p class="code-line indent">
+                            <p class="code-line">
+                                <span class="code-number">03</span>
                                 <span class="code-property">
                                     focus:
                                 </span>
@@ -120,7 +117,8 @@
                                     "Data Engineering"
                                 </span>,
                             </p>
-                            <p class="code-line indent">
+                            <p class="code-line">
+                                <span class="code-number">04</span>
                                 <span class="code-property">
                                     devops:
                                 </span>
@@ -128,7 +126,8 @@
                                     true
                                 </span>,
                             </p>
-                            <p class="code-line indent">
+                            <p class="code-line">
+                                <span class="code-number">05</span>
                                 <span class="code-property">
                                     automation:
                                 </span>
@@ -136,7 +135,8 @@
                                     true
                                 </span>,
                             </p>
-                            <p class="code-line indent">
+                            <p class="code-line">
+                                <span class="code-number">06</span>
                                 <span class="code-property">
                                     governance:
                                 </span>
@@ -145,7 +145,7 @@
                                 </span>
                             </p>
                             <p class="code-line">
-                                <span class="code-number">08</span>
+                                <span class="code-number">07</span>
                                 };
                             </p>
                         </div>
@@ -172,33 +172,30 @@
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-index">
-                        01 / SOBRE
+                        SOBRE
                     </span>
                     <h2>
-                        Quem sou eu?
+                        Sobre mim
                     </h2>
                 </div>
                 <div class="about-grid">
                     <div class="about-content">
                         <p class="about-lead">
-                            Atuo na modernização de soluções
-                            corporativas através de Engenharia
-                            de Dados, Desenvolvimento de Software,
-                            DevOps e Automação.
+                            Construo e opero pipelines e plataformas de dados com foco em confiabilidade, automação e
+                            governança.
                         </p>
                         <p>
-                            Participo desde a análise dos requisitos
-                            até a implementação e documentação das
-                            soluções, buscando transformar desafios
-                            de negócio em soluções tecnológicas
-                            eficientes, sustentáveis e escaláveis.
+                            Trabalho no ciclo completo de soluções de dados: levantamento de requisitos, modelagem de
+                            pipelines ETL/ELT, implementação em Python/PySpark e integração com infraestrutura em nuvem.
+                            Minha abordagem prioriza observabilidade, testes e automação para reduzir trabalho manual e
+                            aumentar a escalabilidade.
                         </p>
                     </div>
                     <div class="profile-cards">
                         <article class="profile-card">
-                            <span>
+                            <!-- <span>
                                 01
-                            </span>
+                            </span> -->
                             <h3>
                                 Analítico
                             </h3>
@@ -208,9 +205,9 @@
                             </p>
                         </article>
                         <article class="profile-card">
-                            <span>
+                            <!-- <span>
                                 02
-                            </span>
+                            </span> -->
                             <h3>
                                 Proativo
                             </h3>
@@ -220,9 +217,9 @@
                             </p>
                         </article>
                         <article class="profile-card">
-                            <span>
+                            <!-- <span>
                                 03
-                            </span>
+                            </span> -->
                             <h3>
                                 Colaborativo
                             </h3>
@@ -232,15 +229,14 @@
                             </p>
                         </article>
                         <article class="profile-card">
-                            <span>
+                            <!-- <span>
                                 04
-                            </span>
+                            </span> -->
                             <h3>
                                 Orientado a resultados
                             </h3>
                             <p>
-                                Foco em eficiência, escalabilidade
-                                e geração de valor.
+                                Foco em eficiência, escalabilidade e geração de valor para o negócio.
                             </p>
                         </article>
                     </div>
@@ -250,17 +246,10 @@
         <section id="jornada" class="section journey-section">
             <div class="section-container">
                 <div class="section-header">
-                    <span class="section-index">
-                        02 / JORNADA
-                    </span>
-                    <h2>
-                        Minha trajetória.
-                    </h2>
-                    <p class="section-description">
-                        Uma trajetória construída entre formação,
-                        projetos acadêmicos e experiências
-                        corporativas.
-                    </p>
+                    <span class="section-index">JORNADA</span>
+                    <h2>Formação e experiência</h2>
+                    <p class="section-description">Trajetória orientada à engenharia de software aplicada ao ecossistema
+                        de dados: formação técnica, projetos acadêmicos e experiência em ambientes corporativos.</p>
                 </div>
                 <div class="container-timeline">
                     <div class="jornada-individual">
@@ -278,8 +267,20 @@
                                         ETEC Jorge Street
                                     </h3>
                                     <p>
-                                        Desenvolvimento web com HTML, CSS, JavaScript e SQL Server. Primeiro contato com
-                                        lógica de programação, manutenção de hardware e fundamentos de redes.
+                                        Ensino integrado técnico em Desenvolvimento de Sistemas (P-TECH). </br>
+                                        <b style="color: white;">• Principais disciplinas:</b> Programação em Java,
+                                        Desenvolvimento Web, Banco de Dados, Mobile Development e Análise de
+                                        Sistemas.</br>
+                                        <b style="color: white;">• Parcerias corporativas (P-TECH):</b> Participação em
+                                        mentorias, desafios e
+                                        projetos reais com empresas como Volkswagen do Brasil e IBM, fortalecendo
+                                        habilidades técnicas e comportamentais alinhadas ao mercado.</br>
+                                        <b style="color: white;">• Projeto Final (TCC):</b> Desenvolvimento de um
+                                        aplicativo para auxiliar na gestão
+                                        de vans escolares. As principais funcionalidades do aplicativo incluem notificar
+                                        os pais (os responsáveis das crianças) ​​sobre o status dos passageiros via SMS,
+                                        gerar rotas automáticas para o motorista, controlar os alunos presentes e
+                                        ausentes e centralizar as informações relacionadas às vans.
                                     </p>
                                 </div>
                             </article>
@@ -295,17 +296,20 @@
                                         SPTech - 6º Semestre
                                     </h3>
                                     <p>
-                                        Sistemas de Informação — 6º Semestre </br>
-                                        Graduação em Sistemas de Informação na SPTech com modelo prático baseado em
-                                        metodologias ágeis, Sprints e entregas de MVPs voltados a cenários reais de
-                                        mercado. </br>
-                                        <b style="font-weight: bold; color: white;">Stack Principal:</b> Kotlin, Spring
-                                        Boot, REST APIs, MySQL e SQL Server.</br>
-                                        <b style="font-weight: bold; color: white;">Ecossistema & DevOps:</b> React, AWS
-                                        e automação com CI/CD.</br>
-                                        <b style="font-weight: bold; color: white;">Engenharia de Software:</b> Foco em
-                                        regras de negócio, arquitetura limpa, princípios
-                                        SOLID e Design Patterns.
+                                        <b style="color: white">Curso de graduação em Sistemas de Informação</b> com foco prático e alinhado ao
+                                        mercado de tecnologia. A SPTech adota um modelo de ensino que integra estudo e
+                                        trabalho, trazendo desafios reais para o ambiente acadêmico e promovendo o
+                                        desenvolvimento técnico e comportamental dos alunos. </br>
+                                        Ao longo do curso, tenho contato com tecnologias amplamente utilizadas no
+                                        mercado, atuando em áreas como desenvolvimento de software, engenharia e
+                                        modelagem de dados, bancos de dados, cloud e Big Data, arquitetura de sistemas,
+                                        metodologias ágeis, além de segurança da informação e boas práticas. </br>
+                                        A formação é fortemente baseada em projetos semestrais estruturados com
+                                        metodologias ágeis, incluindo sprints e entregas de MVPs, permitindo vivenciar
+                                        na prática o funcionamento de times de tecnologia. Trabalhamos com cases de
+                                        problemas reais, desenvolvendo soluções próximas ao contexto das empresas, o que
+                                        fortalece o aprendizado, a autonomia, o trabalho em equipe e a preparação para o
+                                        mercado profissional.
                                     </p>
                                 </div>
                             </article>
@@ -321,20 +325,11 @@
                                         Especialização em Engenharia de Dados
                                     </h3>
                                     <p>
-                                        Evolução do perfil de desenvolvimento de software para o ecossistema de dados em
-                                        larga escala, unindo a base sólida de engenharia de software com arquiteturas
-                                        modernas.
-                                        </br></br>
-                                        <b style="font-weight: bold; color: white;">Modelagem e Armazenamento:</b>
-                                        Transição de OLTP para OLAP, Modelagem Dimensional
-                                        (Star Schema) e arquiteturas de Data Lakehouse (AWS/Databricks). </br>
-                                        <b style="font-weight: bold; color: white;">Pipelines e Processamento:</b>
-                                        Construção de fluxos ETL/ELT escaláveis com Python,
-                                        PySpark e orquestradores (Apache Airflow). </br>
-                                        <b style="font-weight: bold; color: white;">Certificações e Pós-Graduação:</b>
-                                        Foco em certificações de mercado de alto valor
-                                        como AWS Certified Data Engineer e pós-graduação lato sensu em
-                                        Engenharia/Arquitetura de Dados.
+                                        <b style="color: white;">Direcionamento para especialização em Engenharia de
+                                            Dados:</b> Especialização em modelagem
+                                        dimensional, arquiteturas Lakehouse (Databricks), e pipeline ETL/ELT com
+                                        Python/PySpark. Interesse em orquestração, observabilidade e certificações
+                                        relevantes na nuvem.
                                     </p>
                                 </div>
                             </article>
@@ -351,12 +346,18 @@
                                     <span class="timeline-period">
                                         2025/01
                                     </span>
-                                    <h3>Estágio em Engenharia de Dados - Vivo</h3>
+                                    <!-- <h3>Estágio em Engenharia de Dados - Vivo</h3> -->
+                                    <h3>Estagiário em Engenharia de Dados | Vivo (Telefônica Brasil)</h3>
                                     <p>
-                                        responsável por analisar, estruturar e integrar dados de forma eficiente entre
-                                        sistemas, contribuindo para a construção de soluções escaláveis e inteligentes.
-                                        Minha missão é garantir que grandes volumes de dados sejam coletados,
-                                        armazenados e processados com qualidade e propósito. </p>
+                                        <b style="color: white;">Atuação</b> em projetos de Engenharia de Dados
+                                        envolvendo sustentação e evolução de
+                                        pipelines de dados, análise de impactos, documentação técnica e migração de
+                                        processos analíticos. Participação em projetos corporativos como adequação ao
+                                        CNPJ Alfanumérico e migração de fluxos Alteryx para Databricks, utilizando
+                                        Databricks, Spark, SQL, Hive, Hadoop, Git e Azure DevOps. Experiência em
+                                        validação de dados, automação de análises e suporte a iniciativas de
+                                        transformação digital.
+                                    </p>
                                 </div>
                             </article>
                             <article class="timeline-item timeline-future">
@@ -371,9 +372,10 @@
                                         Engenheiro de Dados Junior
                                     </h3>
                                     <p>
-                                        Atuar em soluções de Engenharia de Dados, contribuindo com minha experiência em
-                                        desenvolvimento, DevOps e automação para transformar desafios de
-                                        negócio em soluções eficientes, escaláveis e governadas.
+                                        <b style="color: white;">Objetivo:</b> atuar como Engenheiro de Dados Junior,
+                                        entregando pipelines
+                                        confiáveis, automação de processos e integração contínua entre desenvolvimento e
+                                        infraestrutura.
                                     </p>
                                 </div>
                             </article>
@@ -385,89 +387,58 @@
         <section id="projeto-academico" class="section academic-section">
             <div class="section-container">
                 <div class="section-header">
-                    <span class="section-index">
-                        03 / PROJETO ACADÊMICO
-                    </span>
-                    <h2>
-                        Preciosos Laços.
-                    </h2>
+                    <span class="section-index">PROJETO ACADÊMICO</span>
+                    <h2>Preciosos Laços — Case acadêmico</h2>
                 </div>
                 <div class="featured-project">
                     <div class="featured-project-info">
-                        <span class="project-label">
-                            PROJETO PARA CLIENTE REAL
-                        </span>
-                        <h3>
-                            Preciosos Laços
-                        </h3>
-                        <p>
-                            Desenvolvimento de uma solução
-                            para um cliente real utilizando
-                            metodologia ágil e ciclo completo
-                            de desenvolvimento.
-                        </p>
+                        <span class="project-label">PROJETO PARA CLIENTE REAL</span>
+                        <h3>Preciosos Laços</h3>
+                        <p>Case de entrega completa para cliente real: desenvolvimento em ciclo ágil, com foco em
+                            solução prática e apresentação para stakeholders.</p>
                         <div class="project-responsibilities">
-                            <div>
-                                <span>01</span>
-                                Levantamento de requisitos
-                            </div>
-                            <div>
-                                <span>02</span>
-                                Definição da arquitetura
-                            </div>
-                            <div>
-                                <span>03</span>
-                                Desenvolvimento Front-End
-                                e Back-End
-                            </div>
-                            <div>
-                                <span>04</span>
-                                Banco de Dados
-                            </div>
-                            <div>
-                                <span>05</span>
-                                Documentação Técnica
-                            </div>
-                            <div>
-                                <span>06</span>
-                                Apresentações para stakeholders
-                            </div>
+                            <div><span>•</span>Levantamento de requisitos e definição de escopo</div>
+                            <div><span>•</span>Arquitetura e modelagem do sistema</div>
+                            <div><span>•</span>Desenvolvimento Front-End e Back-End</div>
+                            <div><span>•</span>Modelagem e implementação de banco de dados</div>
+                            <div><span>•</span>Documentação técnica e entrega</div>
+                            <div><span>•</span>Apresentações e validação com stakeholders</div>
                         </div>
                     </div>
                     <div class="featured-project-visual" aria-hidden="true">
                         <div class="project-visual-window">
                             <div class="project-window-top">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <span class="window-control close" aria-label="Fechar">
+                                    <svg viewBox="0 0 10 10" aria-hidden="true">
+                                        <path d="M2 2L8 8M8 2L2 8"></path>
+                                    </svg>
+                                </span>
+                                <span class="window-control minimize" aria-label="Minimizar">
+                                    <svg viewBox="0 0 10 10" aria-hidden="true">
+                                        <path d="M2 5H8"></path>
+                                    </svg>
+                                </span>
+
+                                <span class="window-control maximize" aria-label="Maximizar">
+                                    <svg viewBox="0 0 10 10" aria-hidden="true">
+                                        <path d="M3 3H7V7"></path>
+                                        <path d="M7 3L3 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                             <div class="project-dashboard">
                                 <div class="dashboard-sidebar">
-                                    <div class="dashboard-logo">
-                                        PL
-                                    </div>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                    <div class="dashboard-logo">PL</div>
+                                    <span></span><span></span><span></span><span></span>
                                 </div>
                                 <div class="dashboard-main">
-                                    <div class="dashboard-title">
-                                        Dashboard
-                                    </div>
+                                    <div class="dashboard-title">Valores Gerados. </div>
                                     <div class="dashboard-cards">
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                        <div> + Gestão</div>
+                                        <div> + Qualidade</div>
+                                        <div> + Possibilidades</div>
                                     </div>
-                                    <div class="dashboard-chart">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                    </div>
+                                    <div class="dashboard-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
                                 </div>
                             </div>
                         </div>
@@ -479,7 +450,7 @@
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-index">
-                        04 / PROJETOS CORPORATIVOS
+                        PROJETOS CORPORATIVOS
                     </span>
                     <h2>
                         Problemas reais.
@@ -493,117 +464,38 @@
                 </div>
                 <div class="projects-grid">
                     <article class="project-card" data-project="databricks">
-                        <div class="project-card-top">
-                            <span class="project-number">
-                                01
-                            </span>
-                            <span class="project-category">
-                                DATA ENGINEERING
-                            </span>
-                        </div>
+                        <div class="project-card-top"><span class="project-category">DATA ENGINEERING</span></div>
                         <div class="project-card-body">
-                            <h3>
-                                Migração
-                                <span>
-                                    Alteryx → Databricks
-                                </span>
-                            </h3>
-                            <p>
-                                Migração de workflows analíticos
-                                para reduzir custos de licenciamento,
-                                fortalecer a governança e aumentar
-                                a eficiência operacional.
-                            </p>
+                            <h3>Migração <span>Alteryx → Databricks</span></h3>
+                            <p>Modernização de workflows analíticos para reduzir custos de licenciamento e alinhar
+                                processamento a uma plataforma distribuída (Databricks/Spark).</p>
                         </div>
                         <div class="project-card-footer">
-                            <span>
-                                Databricks
-                            </span>
-                            <span>
-                                Spark
-                            </span>
-                            <span>
-                                Python
-                            </span>
-                            <button type="button" class="project-button">
-                                Explorar →
-                            </button>
+                            <span>Databricks</span><span>Spark</span><span>Python</span><button type="button"
+                                class="project-button">Explorar →</button>
                         </div>
                     </article>
                     <article class="project-card" data-project="cnpj">
-                        <div class="project-card-top">
-                            <span class="project-number">
-                                02
-                            </span>
-                            <span class="project-category">
-                                DATA & REGULATORY
-                            </span>
-                        </div>
+                        <div class="project-card-top"><span class="project-category">DATA & REGULATORY</span></div>
                         <div class="project-card-body">
-                            <h3>
-                                Adequação ao
-                                <span>
-                                    CNPJ Alfanumérico
-                                </span>
-                            </h3>
-                            <p>
-                                Preparação de sistemas, pipelines
-                                e integrações para suportar o novo
-                                padrão regulatório definido pela
-                                Receita Federal.
-                            </p>
+                            <h3>Adequação <span>CNPJ Alfanumérico</span></h3>
+                            <p>Preparação de sistemas, pipelines e integrações para suportar o formato alfanumérico do
+                                identificador, com validações e mitigação de riscos em integrações legadas.</p>
                         </div>
-                        <div class="project-card-footer">
-                            <span>
-                                XML
-                            </span>
-                            <span>
-                                Shell Script
-                            </span>
-                            <span>
-                                IA
-                            </span>
-                            <button type="button" class="project-button">
-                                Explorar →
-                            </button>
-                        </div>
+                        <div class="project-card-footer"><span>XML</span><span>Shell
+                                Script</span><span>Python</span><button type="button" class="project-button">Explorar
+                                →</button></div>
                     </article>
                     <article class="project-card" data-project="devops">
-                        <div class="project-card-top">
-                            <span class="project-number">
-                                03
-                            </span>
-                            <span class="project-category">
-                                DEVOPS
-                            </span>
-                        </div>
+                        <div class="project-card-top"><span class="project-category">DEVOPS</span></div>
                         <div class="project-card-body">
-                            <h3>
-                                Adequação à
-                                <span>
-                                    Esteira DevOps
-                                </span>
-                            </h3>
-                            <p>
-                                Modernização de projetos legados,
-                                implantação de controle de versões,
-                                CI/CD e fluxo corporativo de DevOps.
-                            </p>
+                            <h3>Esteira <span>DevOps</span></h3>
+                            <p>Padronização de repositórios, pipelines CI/CD e automação de entrega para reduzir
+                                trabalho manual e aumentar rastreabilidade.</p>
                         </div>
-                        <div class="project-card-footer">
-                            <span>
-                                Azure DevOps
-                            </span>
-                            <span>
-                                Git
-                            </span>
-                            <span>
-                                YAML
-                            </span>
-                            <button type="button" class="project-button">
-                                Explorar →
-                            </button>
-                        </div>
+                        <div class="project-card-footer"><span>Azure
+                                DevOps</span><span>Git</span><span>YAML</span><button type="button"
+                                class="project-button">Explorar →</button></div>
                     </article>
                 </div>
             </div>
@@ -612,7 +504,7 @@
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-index">
-                        05 / COMPETÊNCIAS
+                        COMPETÊNCIAS
                     </span>
                     <h2>
                         O que eu faço.
@@ -620,65 +512,34 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skills-column">
-                        <span class="skills-label">
-                            TÉCNICAS
-                        </span>
+                        <span class="skills-label">DATA ENGINEERING</span>
                         <div class="skill-list">
-                            <span>
-                                Engenharia de Dados
-                            </span>
-                            <span>
-                                Desenvolvimento de Software
-                            </span>
-                            <span>
-                                DevOps & CI/CD
-                            </span>
-                            <span>
-                                Automação de Processos
-                            </span>
-                            <span>
-                                Governança de Dados
-                            </span>
-                            <span>
-                                Integração de Sistemas
-                            </span>
-                            <span>
-                                Documentação Técnica
-                            </span>
-                            <span>
-                                Inteligência Artificial Aplicada
-                            </span>
+                            <span>Python / PySpark</span>
+                            <span>Databricks</span>
+                            <span>ETL / ELT</span>
+                            <span>Delta Lake / Data Lakehouse</span>
+                            <span>Modelagem Dimensional</span>
+                            <span>SQL</span>
                         </div>
                     </div>
                     <div class="skills-column">
-                        <span class="skills-label">
-                            PROFISSIONAIS
-                        </span>
+                        <span class="skills-label">CLOUD & INFRA</span>
                         <div class="skill-list">
-                            <span>
-                                Resolução de Problemas
-                            </span>
-                            <span>
-                                Comunicação
-                            </span>
-                            <span>
-                                Apresentações
-                            </span>
-                            <span>
-                                Análise de Requisitos
-                            </span>
-                            <span>
-                                Trabalho em Equipe
-                            </span>
-                            <span>
-                                Visão de Negócio
-                            </span>
-                            <span>
-                                Aprendizado Contínuo
-                            </span>
-                            <span>
-                                Organização & Governança
-                            </span>
+                            <span>AWS (conceitos)</span>
+                            <span>Azure DevOps</span>
+                            <span>Docker</span>
+                            <span>Linux / SSH</span>
+                            <span>Armazenamento (S3)</span>
+                        </div>
+                    </div>
+                    <div style="grid-column: 1 / -1; margin-top:18px;">
+                        <span class="skills-label">DEVOPS & AUTOMATION</span>
+                        <div class="skill-list">
+                            <span>CI/CD</span>
+                            <span>Git</span>
+                            <span>Shell Script</span>
+                            <span>Orquestração / Automação</span>
+                            <span>Observabilidade</span>
                         </div>
                     </div>
                 </div>
@@ -691,10 +552,8 @@
                     <span>Git</span>
                     <span>YAML</span>
                     <span>Linux</span>
-                    <span>SSH</span>
                     <span>XML</span>
                     <span>Shell Script</span>
-                    <span>IA Generativa</span>
                 </div>
             </div>
         </section>
@@ -705,7 +564,7 @@
             <div class="section-container knowledge-container">
                 <div class="knowledge-content">
                     <span class="section-index">
-                        06 / COMPARTILHANDO CONHECIMENTO
+                        COMPARTILHANDO CONHECIMENTO
                     </span>
                     <h2>
                         Tecnologia também
@@ -714,16 +573,14 @@
                         </span>
                     </h2>
                     <p>
-                        No dia 09/12/2025, participei da recepção
-                        dos alunos da Escola PEI Alberto Saloti
-                        na Vivo, contribuindo com uma apresentação
-                        sobre Dados e Tecnologia.
+                        <b style="color: white;">Conduzi</b> uma apresentação sobre aplicações práticas de dados para
+                        estudantes em evento institucional.
+                        A atividade combinou exposição conceitual e demonstração de casos de uso, com foco em aproximar
+                        teoria e prática.
                     </p>
                     <p>
-                        A experiência envolveu apresentação em
-                        público, demonstração de aplicações práticas
-                        da área de dados e interação com estudantes
-                        interessados em tecnologia.
+                        Essas iniciativas reforçam minha atuação além da entrega técnica: comunicação com público,
+                        preparação de material e demonstração de soluções de dados.
                     </p>
                     <div class="knowledge-tags">
                         <span>
@@ -746,7 +603,7 @@
             <div class="section-container">
                 <div class="section-header">
                     <span class="section-index">
-                        07 / DIFERENCIAIS
+                        DIFERENCIAIS
                     </span>
                     <h2>
                         O que eu já realizei.
@@ -754,57 +611,21 @@
                 </div>
                 <div class="results-grid">
                     <article class="result-card">
-                        <span class="result-number">
-                            01
-                        </span>
-                        <h3>
-                            Projeto para
-                            cliente real
-                        </h3>
-                        <p>
-                            Desenvolvimento de uma solução
-                            utilizando ciclo completo de
-                            desenvolvimento.
-                        </p>
+                        <h3>Entrega de soluções para cliente real</h3>
+                        <p>Participação em projeto com ciclo completo: análise, implementação e entrega para cliente
+                            real.</p>
                     </article>
                     <article class="result-card">
-                        <span class="result-number">
-                            02
-                        </span>
-                        <h3>
-                            Projetos corporativos
-                            estratégicos
-                        </h3>
-                        <p>
-                            Atuação em desafios relacionados
-                            a dados, DevOps e modernização.
-                        </p>
+                        <h3>Projetos corporativos</h3>
+                        <p>Atuação em iniciativas de modernização tecnológica envolvendo dados e automação.</p>
                     </article>
                     <article class="result-card">
-                        <span class="result-number">
-                            03
-                        </span>
-                        <h3>
-                            Engenharia
-                            de Dados
-                        </h3>
-                        <p>
-                            Participação em iniciativas de
-                            modernização e evolução de soluções.
-                        </p>
+                        <h3>Engenharia de Dados</h3>
+                        <p>Colaboração em construção e evolução de pipelines e processos de dados.</p>
                     </article>
                     <article class="result-card">
-                        <span class="result-number">
-                            04
-                        </span>
-                        <h3>
-                            Compartilhamento
-                            de conhecimento
-                        </h3>
-                        <p>
-                            Experiência com apresentação e
-                            disseminação de conhecimento.
-                        </p>
+                        <h3>Compartilhamento de conhecimento</h3>
+                        <p>Atividades de apresentação e capacitação que apoiam a adoção de práticas e tecnologias.</p>
                     </article>
                 </div>
             </div>
@@ -813,21 +634,16 @@
             <div class="section-container">
                 <div class="objective-content">
                     <span class="section-index">
-                        08 / PRÓXIMO CAPÍTULO
+                        PRÓXIMO CAPÍTULO
                     </span>
                     <h2>
-                        Transformar desafios
-                        de negócio em
-                        <span>
-                            soluções tecnológicas.
-                        </span>
+                        Próximo capítulo
+                        <span>Atuar em engenharia de dados aplicada</span>
                     </h2>
                     <p>
-                        Busco oportunidades para atuar em análise,
-                        desenvolvimento e engenharia de soluções,
-                        contribuindo com minha experiência em dados,
-                        automação, desenvolvimento de software e
-                        modernização tecnológica.
+                        Procuro oportunidades para atuar em engenharia de dados, automação e infraestrutura de dados,
+                        contribuindo na construção de pipelines confiáveis, automação de operações e governança de
+                        dados.
                     </p>
                 </div>
             </div>
@@ -839,46 +655,59 @@
                         VAMOS CONVERSAR?
                     </span>
                     <h2>
-                        Vamos construir
-                        algo relevante.
+                        Vamos conversar sobre dados
                     </h2>
                     <p>
-                        Estou aberto a oportunidades,
-                        projetos e conexões na área de
-                        tecnologia, dados e engenharia
-                        de soluções.
+                        Disponível para oportunidades, projetos e colaborações em Engenharia de Dados, automação e
+                        modernização de plataformas.
                     </p>
                     <div class="contact-actions">
+
                         <a href="https://linkedin.com/in/pedro-henrique-rodrigues-baa145258" class="contact-link"
-                            target="_blank" rel="noopener noreferrer">
-                            <span>
-                                LinkedIn
+                            target="_blank" rel="noopener noreferrer" data-title="Visitar o LinkedIn de Pedro Henrique">
+                            <span class="contact-link-info">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
                             </span>
-                            <span>
-                                ↗
-                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
+
                         <a href="https://github.com/PedroHenriqueRC" class="contact-link" target="_blank"
-                            rel="noopener noreferrer">
-                            <span>
-                                GitHub
+                            rel="noopener noreferrer" data-title="Visitar o GitHub de Pedro Henrique">
+                            <span class="contact-link-info">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
                             </span>
-                            <span>
-                                ↗
-                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
-                        <a href="mailto:" class="contact-link">
-                            <span>
-                                E-mail
+
+                        <a href="mailto:pedro.hrocs@gmail.com" class="contact-link"
+                            data-title="Enviar um e-mail para Pedro Henrique">
+                            <span class="contact-link-info">
+                                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                                <span>E-mail</span>
                             </span>
-                            <span>
-                                ↗
-                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
+
+                        <!-- <a href="./assets/arquivo/PEDRO_HENRIQUE_RODRIGUES_CARDOSO_CURRICULO.pdf"
+                            download="PEDRO_HENRIQUE_RODRIGUES_CARDOSO_CURRICULO.pdf" class="contact-link"
+                            data-title="Baixar currículo de Pedro Henrique Rodrigues Cardoso">
+                            <span class="contact-link-info">
+                                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                                <span>Curriculo</span>
+                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">↗</span>
+                        </a> -->
+
                     </div>
                 </div>
             </div>
-                    <img src="./assets/imagem/foto.jpeg" alt="">
+            <img src="./assets/imagem/foto.jpeg" alt="Foto de Pedro Henrique Rodrigues Cardoso">
         </section>
     </main>
     <div id="project-modal" aria-hidden="true">
